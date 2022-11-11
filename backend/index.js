@@ -48,6 +48,9 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
 });
 
+httpServer.listen(PORT, () => {
+  console.log("connect port: " + PORT)
+})
 
 //bat socket.io
 io.on("connection", (socket) => {
@@ -88,6 +91,4 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(PORT, () => {
-  console.log("connect port: " + PORT)
-})
+
