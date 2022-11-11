@@ -46,6 +46,9 @@ const PORT = process.env.PORT || 5000;
 const httpServer = createServer(app);
 //khoi tao socket.io
 const io = new Server(httpServer, {
+  cors: {
+    origin: '*'
+  }
 });
 
 httpServer.listen(PORT, () => {
@@ -54,6 +57,7 @@ httpServer.listen(PORT, () => {
 
 //bat socket.io
 io.on("connection", (socket) => {
+  console.log('connect soket io')
   // event 'setup' => callback function
   socket.on("setup", (userData) => {
     //tao 1 room cho user co user._id trong userData
