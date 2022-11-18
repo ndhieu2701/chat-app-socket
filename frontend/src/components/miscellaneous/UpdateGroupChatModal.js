@@ -45,7 +45,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
       };
 
       const { data } = await axios.put(
-        "http://localhost:5000/api/chat/rename",
+        "http://10.20.252.18:5000/api/chat/rename",
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -85,7 +85,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`http://localhost:5000/api/user?search=${search}`, config);
+      const { data } = await axios.get(`http://10.20.252.18:5000/api/user?search=${search}`, config);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
@@ -133,7 +133,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        `http://localhost:5000/api/chat/groupadd`,
+        `http://10.20.252.18:5000/api/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -178,7 +178,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        `http://localhost:5000/api/chat/groupremove`,
+        `http://10.20.252.18:5000/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
