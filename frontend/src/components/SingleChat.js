@@ -29,7 +29,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [typing, setTyping] = useState(false)
   const [isTyping, setIsTyping] = useState(false)
 
-  const { selectedChat, setSelectedChat, user } = ChatState();
+  const { selectedChat, setSelectedChat, user, notification, setNotification } = ChatState();
   const toast = useToast();
 
   //tao end point khi ket noi server
@@ -58,7 +58,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         !selectedChatCompare || // if chat is not selected or doesn't match current chat
         selectedChatCompare._id !== newMessageRecieved.chat._id
       ) {
-        
+        if(!notification.includes(newMessageRecieved)){
+          setNotification([newMessageRecieved,...notification])
+          setFetchAgain(!fetchAgain)
+        }
       } else {
         setMessages([...messages, newMessageRecieved]);
       }
