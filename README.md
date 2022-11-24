@@ -1,10 +1,11 @@
 # chat-app-socket ver 1.0
 --- Các chức năng chính của phiên bản này ---
-1. tìm kiếm tài khoản theo email của họ, ấn vào kết quả để tạo boxchat với họ
-2. chat realtime hiển thị xem người đó có đang chat với mình hay không
-3. xem thông tin của mình hoặc của người khác (chỉ hiển thị email và ảnh đại diện)
-4. hiển thị thông báo khi có tin nhắn mới
-5. tạo groupchat với các chức năng: đổi trên group chat, thêm thành viên vào groupchat, xoá thành viên khỏi groupchat, xem thành viên có trong groupchat (chỉ admin)
+1. đăng kí/ đăng nhập tài khoản chat
+2. tìm kiếm tài khoản theo email của họ, ấn vào kết quả để tạo boxchat với họ
+3. chat realtime hiển thị xem người đó có đang chat với mình hay không
+4. xem thông tin của mình hoặc của người khác (chỉ hiển thị email và ảnh đại diện)
+5. hiển thị thông báo khi có tin nhắn mới
+6. tạo groupchat với các chức năng: đổi trên group chat, thêm thành viên vào groupchat, xoá thành viên khỏi groupchat, xem thành viên có trong groupchat (chỉ admin)
 
 --- Install ---
 1. cd thư mục clone về, sau đó npm install để install node module cho backend
