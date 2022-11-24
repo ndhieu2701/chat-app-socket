@@ -33,7 +33,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const toast = useToast();
 
   //tao end point khi ket noi server
-  const END_POINT = "http://10.20.252.18:5000";
+  const END_POINT = "";
 
   //ket noi socket.io voi server
   useEffect(() => {
@@ -81,7 +81,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
 
         const { data } = await axios.post(
-          "http://10.20.252.18:5000/api/message",
+          "/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,
@@ -118,7 +118,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `http://10.20.252.18:5000/api/message/${selectedChat._id}`,
+        `/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);

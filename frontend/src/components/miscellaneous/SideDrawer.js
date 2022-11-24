@@ -75,7 +75,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.get(
-        `http://10.20.252.18:5000/api/user?search=${search}`,
+        `/api/user?search=${search}`,
         config
       );
       setLoading(false);
@@ -101,7 +101,7 @@ const SideDrawer = () => {
         },
       };
       const { data } = await axios.post(
-        `http://10.20.252.18:5000/api/chat`,
+        `/api/chat`,
         { userId },
         config
       );
