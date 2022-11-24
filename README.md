@@ -13,7 +13,7 @@
 
 --- Lưu ý ---
 1. để chạy realtime cần phải tra ip của máy mình và thay vào phần proxy trong package.json của folder frontend và ENDPOINT trong file singlechat.js trong folder components
-vd: thay "http://localhost:5000" bằng "http://192.168.1.7:5000"
+- vd: thay "http://localhost:5000" bằng "http://192.168.1.7:5000"
 
 --- Cảm ơn --- 
 1. cảm ơn mọi người đã tham khảo project này. hi vọng mọi người có thể cho mình 1 star khi dùng project này <3
