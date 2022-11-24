@@ -33,7 +33,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const toast = useToast();
 
   //tao end point khi ket noi server
-  const END_POINT = "";
+  const END_POINT = "http://localhost:5000";
 
   //ket noi socket.io voi server
   useEffect(() => {
